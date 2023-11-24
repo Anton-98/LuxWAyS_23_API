@@ -1,6 +1,6 @@
 
 # FUZZING
-## Il faut être sur le dossier du projet.
+## Il faut lance la commande suivante
 
 ffuf -w http-request-methods.txt -u "url-endpoint" -X FUZZ
 
