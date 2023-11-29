@@ -1,15 +1,35 @@
+#### Prise à mains Burp Suite
+
+##### Application
+1 - Creation de compte
+
+2 - Ouvrir Mailhog
+
+
+##### Burp Suite
+1 - Ouvrir le logiciel
+
+2 - Cliquer sur l'onglet **Proxy**, ensuite sur le sous-onglet **Intercept**
+
+3 - Cliquer sur le bouton **Open Browser**
+
+4 - Aller sur l'onglet **HTTP History**
+
+5 - Aller sur le navigateur et taper l'URL http://localhost:8888
+
+
 
 ## Démo 1 - Augmenter le solde de votre compte
 
-### Détails
-
 #### Outils a utiliser : **Burp Suite**
+
+### Détails
 
 1 - Se connecter à l'application à partir de http://localhost:8888/login
 
 2 - Cliquez sur **Shop** dans la barre de navigation pour visiter http://localhost:8888/shop
 
-3 - Le solde initial disponible est de 100 $. Essayez de commander l'article de 10 $ dans la boutique en utilisant le bouton Acheter et observez la demande envoyée.
+3 - Le solde initial disponible est de **100 $**. Essayez de commander l'article de 10 $ dans la boutique en utilisant le bouton Acheter et observez la demande envoyée.
 
 4 - En observant la requête POST **/workshop/api/shop/orders**, on constate que le crédit a été réduit de 10 $ et que le solde disponible maintenant est de 90 $.
 
@@ -25,9 +45,9 @@
 
 ## Démo 2 - Modifier la valeur d'une proprièté interne de la vidéo personnelle
 
-### Détails
-
 #### Outils a utiliser : **Burp Suite**
+
+### Détails
 
 1 - Se connecter à l'application à partir de http://localhost:8888/login
 
@@ -39,4 +59,24 @@
 
 5 - Ainsi, nous pouvons essayer d'envoyer la requete PUT **/identity/api/v2/user/videos/32**,  à Repeater.
 
-6 - Essayez de copier la propriete `conversion_params` et sa valeur. 
+6 - Essayez de copier la proprièté `conversion_params` depuis la reponse et vous le collez sur la requete. Puis modifier la valeur de cette proprièté. On observe que la valeur de la proprièté interne de la vidéo peut être modifier.
+
+
+## Démo 3 - Visualistion de données à caractere personnelles
+
+### Détails
+
+1 - Sur un navigateur ouvrir Mailhog à partir de l'adresse  http://localhost:8025/
+
+2 - Se connecter à l'application à partir de http://localhost:8888/login
+
+3 - 
+
+4 - 
+
+5 - 
+
+6 - 
+
+7 - 
+
