@@ -40,6 +40,11 @@ def create_products():
             'name': 'Wheel',
             'price': 10,
             'image_url': 'images/wheel.svg'
+        },
+        {
+            'name': 'Car',
+            'price': 5000,
+            'image_url': 'images/car.jpeg'
         }
     ]
     for product_details in product_details_all:

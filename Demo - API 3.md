@@ -1,9 +1,29 @@
 #### Prise à mains Burp Suite
 
-##### Application
+
+#####  Execute APP
+
+#### Windows 
+
+git clone https://github.com/Anton-98/LuxWAyS_23_APP.git --config core.autocrlf=input
+
+$ call "%cd%\deploy\docker\build-all.bat"
+
+$ docker-compose -f deploy/docker/docker-compose.yml --compatibility up -d
+
+#### Linux 
+
+git clone https://github.com/Anton-98/LuxWAyS_23_APP.git 
+
+$ deploy/docker/build-all.sh
+
+$ docker-compose -f deploy/docker/docker-compose.yml --compatibility up -d
+
+##### Application : `http://localhost:8888`
+
 1 - Creation de compte
 
-2 - Ouvrir Mailhog
+2 - Ouvrir Mailhog : `http://localhost:8025`
 
 
 ##### Burp Suite
